@@ -3,7 +3,7 @@ import cv2
 import dlib
 import numpy as np
 from scipy.spatial import distance as dist
-
+detector = dlib.get_frontal_face_detector()
 # 定义一些常量
 EYE_AR_THRESH = 0.3 # 眼部纵横比的阈值，低于该值则认为眼睛闭合
 EYE_AR_CONSEC_FRAMES = 3 # 连续多少帧低于阈值则认为眨眼
